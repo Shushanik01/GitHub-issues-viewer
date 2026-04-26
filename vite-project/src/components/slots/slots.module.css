@@ -129,6 +129,7 @@ h2:hover::after {
     align-items: center;
     justify-content: space-between;
     gap: 6px;
+    overflow: hidden;
 }
 
 .viewBtn {
@@ -155,6 +156,10 @@ h2:hover::after {
     text-decoration: none;
     font-weight: 500;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    flex-shrink: 1;
 }
 
 .inspectLink:hover {

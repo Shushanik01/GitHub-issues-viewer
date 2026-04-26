@@ -1,6 +1,7 @@
 import styles from './slots.module.css';
+import type { Issue } from '../../types';
 
-const Slots = ({data}) => {
+const Slots = ({ data }: { data: Issue }) => {
     return(
         <div className={styles.slotContainer}>
             <span className={styles.headerWrapper}>

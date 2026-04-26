@@ -1,7 +1,13 @@
 import { useEffect } from "react";
+import type { Dispatch, SetStateAction } from 'react';
 import styles from './theme.module.css';
 
-function Theme({theme, setTheme}){
+interface ThemeProps {
+    theme: 'Light' | 'Dark';
+    setTheme: Dispatch<SetStateAction<'Light' | 'Dark'>>;
+}
+
+function Theme({ theme, setTheme }: ThemeProps) {
 
     const handleThemeChange = () =>{
         setTheme(prevTheme => prevTheme === 'Light' ? 'Dark' : 'Light')

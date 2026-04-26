@@ -5,12 +5,13 @@ import Dashboard from '../components/dashboard/dashboard';
 import Theme from '../components/theme/theme';
 import Filtering from '../components/filter/filterLogic';
 import styles from './App.module.css';
+import type { Issue } from '../types';
 
  export default function App(){
     const [owner, setOwner] = useState('facebook');
     const [repo, setRepo] = useState('react');
-    const [allIssues, setAllIssues] = useState([]);
-    const [issues, setIssues] = useState([]);
+    const [allIssues, setAllIssues] = useState<Issue[]>([]);
+    const [issues, setIssues] = useState<Issue[]>([]);
     const [page, setPage] = useState(1);
     const [theme, setTheme] = useState<'Light' | 'Dark'>('Light');
 

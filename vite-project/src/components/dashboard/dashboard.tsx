@@ -1,11 +1,17 @@
+import type { Dispatch, SetStateAction } from 'react';
 import styles from './dashboard.module.css';
 import Slots from '../slots/slots';
-// import { useState } from 'react';
+import type { Issue } from '../../types';
 
-const Dashboard = ({ data, page, setPage }) => {
+interface DashboardProps {
+    data: Issue[];
+    page: number;
+    setPage: Dispatch<SetStateAction<number>>;
+}
+
+const Dashboard = ({ data, page, setPage }: DashboardProps) => {
 
     const handlePrevious = () => {
-
         setPage(prevPage => prevPage - 1)
     };
 

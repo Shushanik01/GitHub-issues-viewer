@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import styles from "./filterLogic.module.css";
-
-interface Issue {
-    created_at: string;
-    updated_at: string;
-    [key: string]: unknown
-};
+import type { Issue } from "../../types";
 
 interface FilteringProps {
     data: Issue[];
