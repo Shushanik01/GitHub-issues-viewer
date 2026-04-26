@@ -1,0 +1,50 @@
+.container{
+    flex: 1;
+    height: 80vh;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    /* padding: 0 2%; */
+    justify-content: center;
+}
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 4vh;
+}
+
+.btns button {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 2px solid #50B445;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btns button:hover:not(:disabled) {
+    background: #50B445;
+    color: white;
+}
+
+.btns button:disabled {
+    border-color: var(--card-border);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.pageNumber {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-primary);
+    min-width: 24px;
+    text-align: center;
+}
